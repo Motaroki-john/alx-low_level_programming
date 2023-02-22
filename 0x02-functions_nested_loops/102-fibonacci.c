@@ -1,28 +1,28 @@
 # include <atdio.h>
 
 /**
- * main - prints first 50 fibanacci numbers, starting with 1 and 2
- * separated by a comma followed by a space.
+ * main - prints first 52 fibanacci numbers
  *
- * Return: Always 0.
+ * Return: Nothing!
  */
 int main (void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	int i = 0;
+	long j = 1, k = 2;
 
-	for (count = 0; count < 50; count++)
+	while (i < 50)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-
-		fib1 = fib2;
-		fib2 = sum;
-
-		if (count == 49)
-			printf("\n");
+		if (i == 0)
+		printf("%ld", j);
+		else if (i == 1)
+		printf("%ld", i);
 		else
-			printf(", ");
-	}
+		{
+			k += j;
+			j = k - j;
+			printf(",  %ld", k);
+                         }
+		+ii;
+		printf("\n");
 	return (0);
 }
